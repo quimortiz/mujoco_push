@@ -136,7 +136,6 @@ print('Generalized velocities:', data.qvel)
 data.qvel[-2] = vy_des[0]
 data.qvel[-3] = vx_des[0]
 
-
 # sys.exit(0)
 
 
