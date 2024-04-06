@@ -12,15 +12,15 @@ from . import MUJOCO_PUSH_DATADIR
 class Robot_push():
 
 
-    def __init__(self ):
+    def __init__(self):
         """
         """
         # self.controller = controllers.Position_Planner(data)
         xml_path = os.path.join( MUJOCO_PUSH_DATADIR,  'model.xml')
         self.model = mujoco.MjModel.from_xml_path(xml_path)
         self.data = mujoco.MjData(self.model)
-        self.renderer = mujoco.Renderer(self.model)
-        self.renderer.update_scene(self.data)
+        # self.renderer = mujoco.Renderer(self.model)
+        # self.renderer.update_scene(self.data)
         self.x0 = self.data.qpos
 
         mujoco.mj_forward(self.model, self.data)
