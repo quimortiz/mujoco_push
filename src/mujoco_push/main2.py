@@ -22,7 +22,7 @@ argsp.add_argument("--vis", type=int, default=0)
 
 
 # load the model.xml
-xml_path = "model.xml"
+xml_path = "xml_models/model.xml"
 
 model = mujoco.MjModel.from_xml_path(xml_path)
 data = mujoco.MjData(model)

@@ -4,11 +4,20 @@
 
 
 import mujoco
-from . import controllers
+
+try:
+    from . import controllers
+except:
+    import controllers
+
 import numpy as np
 import os
 
-from . import MUJOCO_PUSH_DATADIR
+try:
+    from . import MUJOCO_PUSH_DATADIR
+except:
+    MUJOCO_PUSH_DATADIR = "xml_models"
+
 class Robot_push():
 
 

@@ -1,5 +1,8 @@
 import numpy as np
-from . import utils
+try:
+    from . import utils
+except:
+    import utils
 
 class Low_level_Force_Control:
 
